@@ -55,13 +55,25 @@
       Open your To Do List
     </a>
 
+
     <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark"
       aria-labelledby="offcanvasDarkLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkLabel">To Do List</h5>
+
+        <form class="m-1">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="addToDo" aria-describedby="addToDo" value="Enter To Do Item...">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
+
+        <h5 class="offcanvas-title" id="offcanvasDarkLabel">To Do List</h5>
+
+
         <p>Place offcanvas content here.</p>
       </div>
     </div>
