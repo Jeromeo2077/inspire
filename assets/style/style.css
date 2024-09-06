@@ -59,3 +59,9 @@
   font-weight: 900;
   font-style: italic;
 }
+
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+}
