@@ -5,6 +5,7 @@ export class BackgroundImagesController {
   constructor() {
     console.log("BackgroundImagesController Loaded");
 
+    this.getBackgroundImages()
   }
 
   async getBackgroundImages() {
