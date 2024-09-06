@@ -6,7 +6,9 @@ export class BackgroundImages {
 
   get backgroundImagesTemplate() {
     return /*HTML*/`
-    <p>Test</p>`
+          <div>
+         <img src="${this.largeImgUrl}" class="background-image">
+        </div>`
+
   }
 }
-
