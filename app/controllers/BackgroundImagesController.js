@@ -25,7 +25,6 @@ export class BackgroundImagesController {
     const backgroundImage = AppState.backgroundImage
 
     setHTML('background-image-html', backgroundImage.backgroundImagesTemplate)
-
   }
 
 }

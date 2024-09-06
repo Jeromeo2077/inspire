@@ -9,6 +9,5 @@ export class BackgroundImages {
           <div>
          <img src="${this.largeImgUrl}" class="background-image">
         </div>`
-
   }
 }

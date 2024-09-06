@@ -10,8 +10,6 @@ class BackgroundImagesService {
 
     const newBackgroundImage = new BackgroundImages(response.data)
     AppState.backgroundImage = newBackgroundImage
-
-
   }
 
 
