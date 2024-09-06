@@ -1,3 +1,4 @@
+import { BackgroundImages } from './models/BackgroundImages.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -7,7 +8,7 @@ class ObservableAppState extends EventEmitter {
   /**@type {import('./models/Account.js').Account | null} */
   account = null
 
-  /**@Type {BackgroundImage} */
+  /**@type {BackgroundImages} */
   backgroundImage = null
 }
 

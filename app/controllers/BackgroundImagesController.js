@@ -24,7 +24,7 @@ export class BackgroundImagesController {
   drawBackgroundImage() {
     const backgroundImage = AppState.backgroundImage
 
-    setHTML('background-image-html', backgroundImage.getBackgroundImagesTemplate)
+    setHTML('background-image-html', backgroundImage.backgroundImagesTemplate)
   }
 
 }

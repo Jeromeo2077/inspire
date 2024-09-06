@@ -4,9 +4,9 @@ export class BackgroundImages {
     this.author = data.author
   }
 
-  getBackgroundImagesTemplate() {
+  get backgroundImagesTemplate() {
     return /*HTML*/`
-style="background-image:
-  url('${this.largeImgUrl}');"`
+    <p>Test</p>`
   }
 }
+
