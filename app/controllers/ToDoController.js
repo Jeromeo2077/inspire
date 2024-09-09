@@ -16,7 +16,16 @@ export class ToDoController {
     } catch (error) {
       Pop.error(error)
       console.log(error);
+    }
+  }
 
+
+  async createToDo(todo) {
+    try {
+      await toDoService.createToDo(todo)
+    } catch (error) {
+      Pop.error(error)
+      console.log(error);
     }
   }
 }

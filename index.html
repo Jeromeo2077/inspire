@@ -64,7 +64,7 @@
           <div class="mb-3">
             <input type="text" class="form-control" id="addToDo" aria-describedby="addToDo" value="Enter To Do Item...">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button onclick="app.ToDoController.createToTo()" type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -72,11 +72,9 @@
       <div class="offcanvas-body">
 
         <h5 class="offcanvas-title" id="offcanvasDarkLabel">To Do List</h5>
-
-
-        <p>Place offcanvas content here.</p>
+        <p>Completed: <span id="todo-count">0/0</span></p>
+        <div id="my-todo-list"></div>
       </div>
-    </div>
 
   </main>
 
