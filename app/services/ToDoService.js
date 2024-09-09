@@ -16,6 +16,8 @@ class ToDoService {
     const newToDoList = new ToDo(response.data)
     AppState.toDoList.push(newToDoList)
 
+    AppState.emit('toDoList')
+
   }
 
 
