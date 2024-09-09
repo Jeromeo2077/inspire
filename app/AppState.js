@@ -1,4 +1,5 @@
 import { BackgroundImages } from './models/BackgroundImages.js'
+import { Quotes } from './models/Quotes.js'
 import { ToDo } from './models/ToDo.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
@@ -11,6 +12,9 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {BackgroundImages} */
   backgroundImage = null
+
+  /**@type {Quotes} */
+  quote = null
 
   /**@type {ToDo[]} */
   toDoList = []
