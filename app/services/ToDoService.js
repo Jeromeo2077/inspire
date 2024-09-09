@@ -12,6 +12,10 @@ class ToDoService {
     const response = await api.post('api/todos', newToDo)
 
     console.log('New ToDo Form Data Sent by ToDoService', newToDo);
+
+    const newToDoList = new ToDo(response.data)
+    AppState.toDoList.push(newToDoList)
+
   }
 
 
