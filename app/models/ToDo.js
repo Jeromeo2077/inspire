@@ -8,7 +8,7 @@ export class ToDo {
   get myToDoListItemHTMLTemplate() {
     return `
     <div class="my-1 d-flex">
-<p>'Description: '</p>
+          <p>Description: ${this.description}</p>
       </div>
     `
   }
