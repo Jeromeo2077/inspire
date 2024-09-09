@@ -60,11 +60,11 @@
       aria-labelledby="offcanvasDarkLabel">
       <div class="offcanvas-header">
 
-        <form class="m-1">
+        <form onsubmit="app.ToDoController.createToDo()" class="m-1">
           <div class="mb-3">
             <input type="text" class="form-control" id="addToDo" aria-describedby="addToDo" value="Enter To Do Item...">
           </div>
-          <button onclick="app.ToDoController.createToTo()" type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>

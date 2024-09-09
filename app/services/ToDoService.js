@@ -4,10 +4,12 @@ import { api } from "./AxiosService.js"
 
 class ToDoService {
 
-  async createToDo(todo) {
-    const response = await api.put('api/todos')
-    console.log('New ToDo Received by ToDoService', todo);
+  async createToDo(todoFormData) {
 
+    console.log('New ToDo Form Data Received by ToDoService', todoFormData);
+
+    const todos = AppState.todo
+    const response = await api.post('api/todos')
   }
 
 
