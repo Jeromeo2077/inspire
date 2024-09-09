@@ -1,5 +1,6 @@
 import { AuthController } from './controllers/AuthController.js';
 import { BackgroundImagesController } from './controllers/BackgroundImagesController.js';
+import { QuotesController } from './controllers/QuotesController.js';
 import { ToDoController } from './controllers/ToDoController.js';
 import { router } from './router-config.js';
 const USE_ROUTER = false
@@ -9,6 +10,7 @@ class App {
   AuthController = new AuthController()
   BackgroundImagesController = new BackgroundImagesController()
   ToDoController = new ToDoController()
+  QuotesController = new QuotesController
 
   constructor() {
     if (USE_ROUTER) {
