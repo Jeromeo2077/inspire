@@ -24,8 +24,7 @@ class ToDoService {
     const response = await api.get('api/todos')
     console.log('ToDoList Received by ToDoService', response.data);
 
-    const newToDoList = new ToDo(response.data)
-    AppState.toDoList = newToDoList
+    AppState.toDoList = response.data
   }
 
 }

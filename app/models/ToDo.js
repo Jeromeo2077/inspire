@@ -4,4 +4,12 @@ export class ToDo {
     this.description = data.description
     this.completed = data.completed || false
   }
+
+  get myToDoListItemHTMLTemplate() {
+    return `
+    <div class="my-1 d-flex">
+<p>'Description: '</p>
+      </div>
+    `
+  }
 }

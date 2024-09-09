@@ -17,6 +17,7 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {ToDo} */
   newToDo = null
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
