@@ -24,13 +24,15 @@ export class ToDoController {
   async createToDo() {
     try {
       event.preventDefault()
-
       const todoForm = event.target
+      console.log('ToDoController has Received the following: ', todoForm);
+
       const todoFormData = getFormData(todoForm)
 
-      await toDoService.createToDo(todoFormData)
-      console.log('ToDoService has created the following: ', todoFormData);
+      console.log('ToDoController has Sent the following: ', todoFormData);
 
+
+      toDoService.createToDo(todoFormData)
     } catch (error) {
       Pop.error(error)
       console.log(error);

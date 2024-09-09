@@ -8,12 +8,15 @@ class ToDoService {
 
     console.log('New ToDo Form Data Received by ToDoService', todoFormData);
 
-    const todos = AppState.todo
-    const response = await api.post('api/todos')
+    const newToDo = new ToDo(todoFormData)
+    const response = await api.post('api/todos', newToDo)
+
+    console.log('New ToDo Form Data Sent by ToDoService', newToDo);
   }
 
 
   async getToDoList() {
+
     const response = await api.get('api/todos')
     console.log('ToDoList Received by ToDoService', response.data);
 
