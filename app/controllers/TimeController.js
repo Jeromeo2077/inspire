@@ -11,7 +11,7 @@ export class TimeController {
   getTime() {
     const time = new Date()
     const currentTime = time.toLocaleTimeString()
-    console.log(currentTime)
+    // console.log(currentTime)
 
     let currentTimeHTML = ''
 

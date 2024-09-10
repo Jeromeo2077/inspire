@@ -17,7 +17,14 @@ class ToDoService {
     AppState.toDoList.push(newToDoList)
 
     AppState.emit('toDoList')
+  }
 
+  async deleteToDo(Id) {
+    const response = await api.delete(`api/todos/${Id}`)
+    console.log('Request to delete', response.data);
+
+    const todoIndex = AppState.toDoList.findIndex(todo => todo.id == Id)
+    AppState.toDoList.splice(todoIndex, 1)
   }
 
 

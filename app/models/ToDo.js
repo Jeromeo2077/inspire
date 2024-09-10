@@ -3,12 +3,13 @@ export class ToDo {
     this.creatorId = data.creatorId
     this.description = data.description
     this.completed = data.completed || false
+    this.id = data.id || ''
   }
 
   get myToDoListItemHTMLTemplate() {
     return `
-    <div class="my-1 d-flex">
-          <p>Description: ${this.description}</p>
+    <div class="m-1 d-flex">
+          <p>${this.description}<i onclick="app.ToDoController.deleteToDo('${this.id}')" class="mdi mdi-close-thick text-danger delete-icon" title="Delete ToDo" role="button"></i></p>
       </div>
     `
   }
