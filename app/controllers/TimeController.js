@@ -5,6 +5,7 @@ export class TimeController {
     console.log('TimeController has loaded');
 
     this.getTime()
+    this.setTimer()
   }
 
   getTime() {
@@ -18,6 +19,10 @@ export class TimeController {
     <div>${currentTime}</div>
     `
     setHTML('time', currentTimeHTML)
+  }
+
+  setTimer() {
+    const interval = setInterval(this.getTime, 1000)
   }
 
 }
