@@ -31,6 +31,10 @@ export class ToDoController {
     todolist.forEach(todo => todolistHTML += todo.myToDoListItemHTMLTemplate)
 
     setHTML('my-todo-list', todolistHTML)
+
+    const completedToDos = AppState.toDoList.filter(todo => todo.completed)
+    setHTML('todo-count', `${completedToDos.length}/${AppState.toDoList.length}`)
+
   }
 
 
@@ -71,7 +75,6 @@ export class ToDoController {
     } catch (error) {
       Pop.error(error)
       console.log(error);
-
     }
 
   }
