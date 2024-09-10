@@ -23,6 +23,17 @@ export class ToDoController {
   }
 
 
+  drawToDoList() {
+    const todolist = AppState.toDoList
+
+    let todolistHTML = ''
+
+    todolist.forEach(todo => todolistHTML += todo.myToDoListItemHTMLTemplate)
+
+    setHTML('my-todo-list', todolistHTML)
+  }
+
+
   async createToDo() {
     try {
       event.preventDefault()
@@ -33,7 +44,6 @@ export class ToDoController {
 
       console.log('ToDoController has Sent the following: ', todoFormData);
 
-
       toDoService.createToDo(todoFormData)
     } catch (error) {
       Pop.error(error)
@@ -41,13 +51,5 @@ export class ToDoController {
     }
   }
 
-  drawToDoList() {
-    const todolist = AppState.toDoList
 
-    let todolistHTML = ''
-
-    todolist.forEach(todo => todolistHTML += todo.myToDoListItemHTMLTemplate)
-
-    setHTML('my-todo-list', todolistHTML)
-  }
 }
