@@ -21,10 +21,18 @@ class ToDoService {
 
   async deleteToDo(Id) {
     const response = await api.delete(`api/todos/${Id}`)
-    console.log('Request to delete', response.data);
 
     const todoIndex = AppState.toDoList.findIndex(todo => todo.id == Id)
     AppState.toDoList.splice(todoIndex, 1)
+  }
+
+  async completeToDo(Id) {
+    const todolist = AppState.toDoList
+    const todoIndex = todolist.findIndex(todo => todo.id == Id)
+    const todo = todolist[todoIndex]
+    const todoData = { completed: !todo.completed }
+    const response = await api.put(`api/todos/${Id}`, todoData)
+    console.log('Completed:', response.data);
   }
 
 

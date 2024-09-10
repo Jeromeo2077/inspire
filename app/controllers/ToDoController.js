@@ -62,7 +62,17 @@ export class ToDoController {
     } catch (error) {
       Pop.error(error)
       console.log(error);
+    }
+  }
+
+  async completeToDo(Id) {
+    try {
+      await toDoService.completeToDo(Id)
+    } catch (error) {
+      Pop.error(error)
+      console.log(error);
 
     }
+
   }
 }
